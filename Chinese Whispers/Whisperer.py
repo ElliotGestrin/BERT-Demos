@@ -46,17 +46,16 @@ class Filler(torch.nn.Module):
         return filled
 
 class Whisperer(torch.nn.Module):
-    class Whisperer:
-        """
-        A class that represents a whisperer that can fill in missing words in a sentence using the Chinese Whispers algorithm.
+    """
+    A class that represents a whisperer that can fill in missing words in a sentence using the Chinese Whispers algorithm.
 
-        Attributes:
-            lang (str): The language used for filling in missing words. Defaults to 'swe'.
-            filler (Filler): An instance of the Filler class used for filling in missing words.
-        """
-        def __init__(self, lang: str = "swe"):
-            super().__init__()
-            self.filler = Filler(lang)
+    Attributes:
+        lang (str): The language used for filling in missing words. Defaults to 'swe'.
+        filler (Filler): An instance of the Filler class used for filling in missing words.
+    """
+    def __init__(self, lang: str = "swe"):
+        super().__init__()
+        self.filler = Filler(lang)
     
     @torch.no_grad()
     def __call__(self, text: str, prob: float = 0.05) -> str:
@@ -91,7 +90,7 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             exit()
     else:
-        whisperer = Whisperer("eng" if "eng" in sys.argv else "swe")
+        whisperer = Whisperer(lang="eng" if "eng" in sys.argv else "swe")
         intro = "Enter text to begin whisper chain: " if "eng" in sys.argv else \
                 "Skriv in text för att starta viskleken: "
         text = input(intro)
