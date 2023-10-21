@@ -1,7 +1,7 @@
 # Chinese Whispers
 
 ## Setup
-Chinese Whispers requires python >= 3.9. While positioned in this folder the environment can then be configured with:
+Chinese Whispers requires python >= 3.10. While positioned in this folder the environment can then be configured with:
 ```
 python3 -m venv env
 source env/bin/activate
