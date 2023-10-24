@@ -1,7 +1,7 @@
-# Bert Demos
+# BERT Demos
 Demos written using BERT language models, mainly those from the Swedish Royal Library.
 
-Currently, there are plans for two demos, which are independent.
+Currently, there are three demos, which are independent. Note that each demo was written in roughly an evening each.
 
 ## Chinese Whispers
 In Chinese Whispers, a part of a text is randomly masked, after which an `Electra-Generator` model fills in the masks. This is then iteratively repeated.
